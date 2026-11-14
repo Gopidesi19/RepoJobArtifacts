@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-java@v5
         with:
           jave-version: '17'
+          distribution: 'Temurin'
           cache: '~/.m2/repository'
           cache-dependency-path: 'pom.xml'
       - name: Install packages

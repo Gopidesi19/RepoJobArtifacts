@@ -1,0 +1,23 @@
+name: Maven CI with Cache
+on:
+  push:
+    branch:
+      - main
+  pull_request:
+    branch:
+      - main
+jobs:
+  maven-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@4
+      - name: Set up Java
+        uses: actions/setup-java
+        with:
+          jave-version: '17'
+          cache: '~/.m2/repository'
+          cache-dependency-path: 'pom.xml'
+      - name: Install packages
+        run: 'mvn clean package'
+

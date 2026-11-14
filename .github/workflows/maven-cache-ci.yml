@@ -18,7 +18,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: 'maven'
-          cache-dependency-path: 'pom.xml'
+          cache-dependency-path: '**/pom.xml'
       - name: Install packages
-        run: 'mvn clean package'
+        run: mvn clean package
 

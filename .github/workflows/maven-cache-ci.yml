@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
       - name: Set up Java
-        uses: actions/setup-java
+        uses: actions/setup-java@v5
         with:
           jave-version: '17'
           cache: '~/.m2/repository'
